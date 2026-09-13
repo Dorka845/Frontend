@@ -23,7 +23,7 @@ if (szam2 > 0) {
 }
 
 //Találós kérdés
-let i = undefined;
+let i = undefined; //meg nincs meghatározva
 for (i=0; i<10; i++);
 console.log(i);
 
@@ -47,7 +47,7 @@ autok.push("Skoda");
 for(i=0; i<autok.length; i++) 
     console.log(`${i}.: ${autok[i]}`);
 
-console.log(`Törölt elem: ${autok.pop()}`);
+console.log(`Törölt elem: ${autok.pop()}`); //utolso elem eltávolítása a tömbből
 
 //------\\
 //Függvények
@@ -78,12 +78,12 @@ autok.push("Honda", "Mercedes", "BYD");
 console.log(autok.findIndex(auto => auto=="BYD"));
 
 //Spread operátor - szétbontja elemeire a tömböt
-autok = ["Seat", ...autok, "Nissan"];
+autok = ["Seat", ...autok, "Nissan"]; //szetszedi egy objektum tömböt, és hozzáfűzi a Seat-ot és a Nissan-t
 console.log(autok);
 
 //Rest paraméter
 //Készítsünk függvényt, amely számokat ad össze, és visszaadja a számok összegét
-function osszead(...szamok){
+function osszead(...szamok){ //...szamok: rest paraméter, amely egy tömböt hoz létre a paraméterekből
     let osszeg = 0;
     for(let i=0; i<szamok.length; i++){
         osszeg += szamok[i];
@@ -93,17 +93,17 @@ function osszead(...szamok){
 console.log(osszead(2, 3, 4, 5));
 
 //Tömb függvények
-console.log(autok.includes("Opel"));
+console.log(autok.includes("Opel")); //true/false visszaadása, hogy a tömb tartalmazza-e az adott elemet
 console.log(autok.includes("Honda"));
 
-console.log(autok.toString());
+console.log(autok.toString()); //tömb elemeinek kiírása stringként
 
-console.log(autok.at(2));
+console.log(autok.at(2)); //2. indexű elem lekérése
 
-console.log(autok.shift());
+console.log(autok.shift()); //első elem eltávolítása a tömbből
 
-console.log(Array.isArray(szam));
-console.log(Array.isArray(autok));
+console.log(Array.isArray(szam)); //false
+console.log(Array.isArray(autok)); //true
 
 
 //Feladat:
@@ -141,7 +141,7 @@ console.log(nagyobbMintSzaz)
 
 
 //4.
-console.log(Math.max(...tomb));
+console.log(Math.max(...tomb)); 
 /**
 function legnagyobbErtek(arr) {
     let maxIndex = 0;
