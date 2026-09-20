@@ -3,7 +3,7 @@ function $(id){
 }
 
 function rangeRGB(){    
-    const r = $('red-range').value;
+    const r = $('red-range').value; //document.getElementById('red-range').value;
     const g = $('green-range').value;
     const b = $('blue-range').value;
     const a = $('alpha-range').value;
