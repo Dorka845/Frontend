@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Async-Await</title>
+</head>
+<body>
+    <script>
+        const receptekLekerdez = new Promise((resolve, reject) =>{
+            setTimeout(() =>{
+                if(Math.random() <0.5) //fele-fele arányban hiba
+                    resolve([122, 673, 89, 24, 745]); 
+                reject("Az azonosítók lekérdezése nem sikerült.");
+            }, 5000); //amig fut a promise <pending>, ha lefutott <fulfilled> vagy <rejected>
+        });
+
+        const receptLekerdez = (id) => new Promise((resolve, reject) =>{
+            setTimeout((id) =>{
+                const recept = {
+                    id: 89,
+                    cim: 'Gulyás leves',
+                    kategoria: 'leves',
+                    ido: '180 perc',
+                    nehezseg: 3
+                };
+
+                if(Math.random() <0.9)
+                    resolve(recept);
+                reject('A recept lekérdezése nem sikerült.');
+            }, 2500);
+        });
+
+        const receptKategoriaAlapjan = (kategoria) => new Promise((resolve, reject) =>{
+            const levesek = [
+                { id: 89, cim: 'Gulyás leves', kategoria: 'leves'},
+                { id: 148, cim: 'Karalábé leves', kategoria: 'leves'},
+                { id: 397, cim: "Gyümölcs leves", kategoria: 'leves'}
+            ]; 
+
+            setTimeout((kategoria) =>{
+                if(Math.random() <0.9)
+                    resolve(levesek);
+                reject(`Nem sikerült lekérdezni a ${kategoria} kategóriát.`)
+            }, 1500);
+        });
+
+        async function getReceptek(){
+            const azonositok = await receptekLekerdez;
+            console.log(azonositok);
+            const recept = await receptLekerdez(azonositok[2]);
+            console.log(recept);
+            const receptek = await receptKategoriaAlapjan(recept.kategoria);
+            console.log(receptek);
+        }
+        getReceptek();
+        
+    </script>
+</body>
+</html>
