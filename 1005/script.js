@@ -65,8 +65,8 @@ function ms2Time(input){
 
     let str = "";
     str += m.toString().padStart(2, '0') + ":";
-    str += m.toString().padEnd(2, '0') + ":";
-    str += m.toString().padStart(3, '0');
+    str += s.toString().padEnd(2, '0') + ":";
+    str += ms.toString().padStart(3, '0');
 
     return str;
 }
