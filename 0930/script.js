@@ -85,7 +85,7 @@ let styleCard = type =>{ //kártya színezése szótár alapján
     });
 }
 
-$('btn').addEventListener('click', getPokeData);
+$('btn').addEventListener('click',() => { getPokeData() });
 $('btn2').addEventListener('click', ()=>{
     const pokeName = $('poke-name').value;
     getPokeData(pokeName);

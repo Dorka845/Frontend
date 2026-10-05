@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>iTunes Zenekereső alkalmazás</title>
+</head>
+<body>
+    <h1>iTunes zenekereső alkalmazás</h1>
+    <h2>Mit keressek meg:</h2>
+    <input type="text" id="keresett">
+    <button id="kereses">Keresés</button>
+
+    <br/><br/>
+
+    <audio controls autoplay id="lejatszo"></audio>
+
+    <br/><br/>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Sorszám</th>
+                <th>Előadó</th>
+                <th>Borítókép</th>
+                <th>Zene címe</th>
+                <th>Zene hossza</th>
+                <th>Kiadás éve</th>
+                <th>Műfaj</th>
+            </tr>
+        </thead>
+        <tbody id="zenek"></tbody>
+    </table>
+
+    <script src="./script.js"></script>
+</body>
+</html>
