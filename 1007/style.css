@@ -1,0 +1,22 @@
+#nap1, #nap2, #nap3, #nap4, #nap5{
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+}
+
+.container{
+    display: flex;
+}
+
+#input{
+    display: flex;
+}
