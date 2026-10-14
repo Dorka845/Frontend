@@ -1,0 +1,33 @@
+.card {
+    align-items: center;
+    margin: 4px dotted rgb(84, 19, 168);
+    background-color: rgb(196, 178, 214);
+    border-radius: 20px;
+    border-color: rgb(106, 49, 153);
+    width: 250px;
+    height: 350px;
+    padding: 20px;
+}
+
+.card #name {
+    text-align: center;
+}
+
+.card #img {
+    align-items: center;
+    border-radius: 20px;
+    width: 160px;
+    height: 160px;
+}
+
+#button {
+    font-size: 15px;
+    font-display: block;
+    background-color: rgb(118, 82, 172);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+}
